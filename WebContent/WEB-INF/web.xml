@@ -8,9 +8,17 @@
   	<servlet-name>helloServlet</servlet-name>
   	<servlet-class>com.blog.HelloServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>helloWorldServlet</servlet-name>
+  	<servlet-class>com.blog.HelloWorldServlet</servlet-class>
+  </servlet>
   
   <servlet-mapping>
   	<servlet-name>helloServlet</servlet-name>
   	<url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>helloWorldServlet</servlet-name>
+  	<url-pattern>/helloWorld</url-pattern>
   </servlet-mapping>
 </web-app>
