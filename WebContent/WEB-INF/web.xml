@@ -4,6 +4,16 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  
+  <context-param>
+	<param-name>settingOne</param-name>
+	<param-value>foo</param-value>
+  </context-param>
+  <context-param>
+	<param-name>settingTwo</param-name>
+	<param-value>bar</param-value>
+  </context-param>
+  
   <servlet>
   	<servlet-name>helloServlet</servlet-name>
   	<servlet-class>com.blog.HelloServlet</servlet-class>
@@ -11,6 +21,18 @@
   <servlet>
   	<servlet-name>helloWorldServlet</servlet-name>
   	<servlet-class>com.blog.HelloWorldServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>servletParameterServlet</servlet-name>
+  	<servlet-class>com.blog.ServletParameterServlet</servlet-class>
+  	<init-param>
+  		<param-name>database</param-name>
+  		<param-value>CustomerSupport</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>server</param-name>
+  		<param-value>10.0.12.5</param-value>
+  	</init-param>
   </servlet>
   
   <servlet-mapping>
@@ -21,4 +43,9 @@
   	<servlet-name>helloWorldServlet</servlet-name>
   	<url-pattern>/helloWorld</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>servletParameterServlet</servlet-name>
+  	<url-pattern>/servletParameters</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
